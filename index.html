@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>Week 5: Node, Day 2</title>
+  
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      
+      <!-- ------------- -->
+      <section class="title-slide">
+        <h3 class="title-text">NODE</h3>
+        <div class="sub-head">
+          <div class="sub-head-text"><span>10.11.18 - Day 2</span></div>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Agenda</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>what we're doing today:</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Grid of 9 - Project Brainstorming</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Intro to HTTP</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Setting up a Web Server</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Setting up p5</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Creating our first API Request</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Sending data to our frontend</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Doing something when we get data</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Doing something with the data</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Creating a p5 class for interactivity</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Other Basic APIs</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Websockets with Twitter</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Grid of 9</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Brainstorming Activity</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Fold a piece of paper into a 3 x 3 grid</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Write down 3 different areas of questioning and a related initial concept.</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Consider 3 completely different ways (tools, methods, forms) for exploring each concept.</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>See <a href="https://creativedev20182.wordpress.com" target="_blank">blog post</a> for more information</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to HTTP</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><b>H</b>yper<b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>This is the way that clients and servers communicate with each other</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Servers are just a bunch of machines that are running in a remote location</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to HTTP</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Basic Flow</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                1.<span>A client (a browser) sends an HTTP request (e.g., get some data, update existing data)
+                  </span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                2.<span>A web server receives the request</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                3.<span>The server runs an application (in our case, Node) to process the request</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                4.<span>The server returns an HTTP response (output) to the browser (we are doing this today)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                5.<span>The client (the browser) receives the response</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to HTTP</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Types of Requests</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>There are a number of different types of http requests that you can make</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Some of the big ones: <code>GET, PUT, POST, DELETE</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>A <code>GET</code> request is for retrieving data only. No changes to data stored server side.</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>A <code>POST</code> request is for sending data to a server (e.g. form submissions)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>CODE</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Clone the repo <a href="https://github.com/rose-water/ga-node-day-2" target="_blank">here</a></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setting up a Web Server</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>REVIEW</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>01-setup-server</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setting up p5</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>02-setup-p5</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Creating our first API Request</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>03-request</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Sending data to our frontend</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>04-send-response</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Doing something when we get data</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>05-sketch</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Doing something with the data</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>06-data</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Creating a p5 class for interactivity</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>07-class</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Other Basic APIs</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>08-other-apis</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Websockets with Twitter</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span>09-websockets-twitter</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- END SLIDES -->
+    </div>
+  </div>
+</body>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+  // ---------------------------------------------
+  init();
+  
+  // ---------------------------------------------
+  function init() {
+    Reveal.initialize({
+      dependencies: [
+      { 
+        src: 'plugin/highlight/highlight.js', 
+        async: true, 
+        callback: function() { hljs.initHighlightingOnLoad(); } 
+      }
+      ]
+    });
+    
+    Reveal.configure({
+      slideNumber: true,
+      slideNumber: 'c/t'
+    });
+    
+  }
+</script>
+
+</html>
