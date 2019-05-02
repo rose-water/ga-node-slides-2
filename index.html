@@ -21,7 +21,7 @@
       <section class="title-slide">
         <h3 class="title-text">NODE</h3>
         <div class="sub-head">
-          <div class="sub-head-text"><span>10.11.18 - Day 2</span></div>
+          <div class="sub-head-text"><span>05.02.19 - Day 2</span></div>
         </div>
       </section>
       
@@ -42,57 +42,42 @@
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Data Visualization Examples</span>
+                +<span>Review: serial communication with Arduino</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Intro to HTTP</span>
+                +<span>Reading serial data with Node</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Setting up a Web Server</span>
+                +<span>Intro to Sockets</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Setting up p5</span>
+                +<span>Node + Sockets + p5: Digital</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Creating our first API Request</span>
+                +<span>Node + Sockets + p5: Analog</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Sending data to our frontend</span>
+                +<span>Node + Sockets + p5: BART API</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Doing something when we get data</span>
+                +<span>Intro to the Johnny 5</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>Doing something with the data</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Creating a p5 class for interactivity</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Other Basic APIs</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Assignment: Data Visualization</span>
+                +<span>Class Assignment (individual or pairs)</span>
               </div>
             </li>
           </ul>
@@ -132,143 +117,6 @@
           </ul>
         </div>
       </section>
-      
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Data Visualization Examples</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>What are your favorites?</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                +<span><a href="http://www.stefanieposavec.com/dear-data-about/" target="_blank">Dear Data: Stefanie Posavec + Giorgia Lupi</a></span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span><a href="https://www.theverge.com/apps/2012/5/9/3009674/nasa-kepler-planet-data-visualized-3d-gestures" target="_blank">Jer Thorp & Oblong Industries: Kepler Visualization</a></span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span><a href="https://www.creativeapplications.net/processing/wind-of-boston-data-paintings-by-refik-anadol-studios/" target="_blank">Refik Anadol: Wind of Boston</a></span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span><a href="https://create.adobe.com/2016/3/16/designing_with_data_nicholas_felton.html" target="_blank">Nick Feltron: Annual Report</a></span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span><a href="https://anticorruption.gistapp.com/catching_tigers_and_flies/" target="_blank">Schema Design: Catching Tigers & Flies</a></span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Intro to HTTP</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span><b>H</b>yper<b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                +<span>This is the way that clients and servers communicate with each other</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Servers are just a bunch of machines that are running in a remote location</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Intro to HTTP</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Basic Flow</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                1.<span>A client (a browser) sends an HTTP request (e.g., get some data, update existing data)
-                  </span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                2.<span>A web server receives the request</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                3.<span>The server runs an application (in our case, Node) to process the request</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                4.<span>The server returns an HTTP response (output) to the browser (we are doing this today)</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                5.<span>The client (the browser) receives the response</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Intro to HTTP</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Types of Requests</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                +<span>There are a number of different types of http requests that you can make</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Some of the big ones: <code>GET, PUT, POST, DELETE</code></span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>A <code>GET</code> request is for retrieving data only. No changes to data stored server side.</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>A <code>POST</code> request is for sending data to a server (e.g. form submissions)</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
 
       <!-- ------------- -->
       <section class="child-slide">
@@ -281,10 +129,10 @@
         <div class="child-slide-body">
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Setting up a Web Server</h5>
+        <h5>Serial communication with Arduino</h5>
         <div class="sub-head">
           <div class="sub-head-text">
             <span>REVIEW</span>
@@ -294,7 +142,22 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <span>01-setup-server</span>
+                +<span>When working with Arduino we can communicate with our computer over serial</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Data transfers 1 bit at a time</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>The Arduino IDE's Serial Monitor lets us read data with <code>Serial.println()</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src="https://cdn-learn.adafruit.com/assets/assets/000/002/613/medium800/learn_arduino_09_mac_ports.jpg?1396785057" width="600" height="auto">
               </div>
             </li>
           </ul>
@@ -303,7 +166,99 @@
 
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Setting up p5</h5>
+        <h5>Reading serial data with Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>SerialPort module</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>We can use a package to read data sent over serial with Node</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://serialport.io/" target="_blank">Node SerialPort Module</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Reading serial data with Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>01-button-serial</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>You will need a push button, 10K ohm resistor</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Upload the code to your arduino board from <code>01-button-serial.ino</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Your push button should be connected to digital pin 2</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src=" https://www.arduino.cc/en/uploads/Tutorial/button.png" width="600" height="auto">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Reading serial data with Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>01-button-serial</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <span><code>cd ga-node-day-2/01-button-serial</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <span><code>npm install</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <span><code>npm start</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <span>See our serial data being outputted to the console (our terminal)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to Sockets</h5>
         <div class="sub-head">
           <div class="sub-head-text">
             <span></span>
@@ -313,7 +268,17 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <span>02-setup-p5</span>
+                +<span>Sockets are a way to create a persistent connection between a client and a server</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Communication is real-time and bi-directional</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We can use them to communicate live data (e.g, from sensors or APIs) to our frontend</span>
               </div>
             </li>
           </ul>
@@ -322,7 +287,104 @@
 
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Creating our first API Request</h5>
+        <h5>Node + Sockets + P5</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Digital</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>We'll use the same arduino code in <code>01-button-serial</code> for this example</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>cd ga-node-day-2/01-sockets</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Open <code>index.js</code> to see how we set up our socket server</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Notice that we are using a new node package, socket.io</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Open a browser and navigate to <code>localhost:3000</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://socket.io/docs/" target="_blank">Socket.io documentation</a></span>
+              </div>
+            </li>  
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node + Sockets + P5</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Analog</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>You will need a knob (ignore the servo in the diagram)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Upload the code to your arduino board from <code>02-knob.ino</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Your knob should be connected to analog pin 0</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src=" https://cdn-learn.adafruit.com/assets/assets/000/002/312/large1024/learn_arduino_fritzing_knob.jpg?1396781602" width="600" height="auto">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node + Sockets + P5</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>BART API</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to Johnny 5</h5>
         <div class="sub-head">
           <div class="sub-head-text">
             <span></span>
@@ -332,7 +394,7 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <span>03-request</span>
+                +<span></span>
               </div>
             </li>
           </ul>
@@ -341,167 +403,23 @@
 
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Sending data to our frontend</h5>
+        <h5>Class Assignment</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span></span>
+            <span>Individual or in pairs</span>
           </div>
         </div>
         <div class="child-slide-body">
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <span>04-send-response</span>
+                +<span></span>
               </div>
             </li>
           </ul>
         </div>
       </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Doing something when we get data</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span></span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                <span>05-sketch</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Doing something with the data</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span></span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                <span>06-data</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Creating a p5 class for interactivity</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span></span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                <span>07-class</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Other Basic APIs</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span></span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                <span>08-other-apis</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Assignment</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Pairs or Individual</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                <span>Find an API from this <a href="https://github.com/toddmotto/public-apis" target="_blank">list</a> to work with</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <span>Since we haven't covered authentication, try to find one that says auth:no</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <span>You can play around with ones that require apiKeys, but they typically require signup</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <span>No APIs requiring OAuth are allowed</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Assignment</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Pairs or Individual</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                <span>Create a basic data visualization using the library of your choice (p5.js) recommended</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <span>You must create a Git repo for your work</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <span>Create a <code>.gitignore</code> file with <code>/node_modules</code> to prevent pushing all your dependencies</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <span>You will work on these on Saturday and present them</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-  
+           
       <!-- END SLIDES -->
     </div>
   </div>
